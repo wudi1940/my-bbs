@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register Account</title>
+    <link href="styles/style.css" rel="stylesheet">
+
+    <script src="scripts/script.js" async></script>
+
+</head>
+<body>
+<form action="/register" method="post">
+    <ul>
+        <li>
+            <label for="nickname">Nickname:</label>
+            <input type="text" id="nickname" name="user_nickname">
+        </li>
+        <li>
+            <label for="account">Account (Use Email):</label>
+            <input type="email" id="account" name="user_account" required>
+        </li>
+        <li>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="user_password" required minlength="6">
+        </li>
+        <li>
+            <label for="confirm_password">Confirm Password:</label>
+            <input type="password" id="confirm_password" name="confirm_password" required onblur="">
+        </li>
+
+        <li>
+            <button type="submit">注册</button>
+        </li>
+
+    </ul>
+
+</form>
+
+</body>
+</html>

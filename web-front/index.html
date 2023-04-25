@@ -24,15 +24,23 @@
 请点击下面的按钮继续操作
 </p>
 
-<form>
-    Account:<input name="account" type="text" value=""><br>
-    password:<input name="password" type="password" value="">
+<form action="/login" method="post">
+    <ul>
+        <li>
+            <label for="account">Account:</label>
+            <input type="text" id="account" name="user_account">
+        </li>
+        <li>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="user_password">
+        </li>
+
+        <li>
+            <button type="submit">登录</button> <button>注册</button>
+        </li>
+
+    </ul>
 </form>
-
-
-
-<button>登录</button>
-<button>注册</button>
 
 
 

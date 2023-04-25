@@ -1,11 +1,14 @@
+/* 一些全局设置 */
 html {
-    /* px 表示“像素（pixels）”: 基础字号为 10 像素 */
-    font-size: 10px;
+    /* 设置大小为63% 可以方便px与em转换 */
+    font-size: 100%;
     /* Google fonts 输出的 CSS */
     font-family: 'Open Sans', sans-serif;
+    line-height: 2;
+    letter-spacing: 1px;
 
-    background-color: #00539F;
-
+    background: rgb(0,177,246);
+    background: linear-gradient(90deg, rgba(0,177,246,1) 15%, rgba(177,3,242,1) 50%, rgba(0,212,255,1) 85%);
 }
 
 h1 {
@@ -15,13 +18,6 @@ h1 {
     padding: 20px 0;
     color: #00539F;
     text-shadow: 3px 3px 3px black;
-}
-
-p, li {
-    font-size: 16px;
-    /* line-height 后面可以跟不同的参数，如果是数字，就是当前字体大小乘上数字 */
-    line-height: 2;
-    letter-spacing: 1px;
 }
 
 body {
@@ -36,22 +32,57 @@ body {
 img {
     display: block;
     margin: 0 auto;
-    width: 400px;
+    width: 250px;
 }
 
-button {
-    display: block;
-    width: 200px;
+ 表单美化
+form {
+    /* 居中表单 */
     margin: 0 auto;
-    background-color: pink;
-    border-width: 2px;
-
-    font-size: 20px;
+    width: 500px;
+    /* 显示表单的轮廓 */
+    padding: 0.5em;
+    border: 2px solid #100606;
+    border-radius: 1em;
 }
 
 label {
-    display: block;
+    /* 确保所有 label 大小相同并正确对齐 */
+    display: inline-block;
+    width: 200px;
+    text-align: right;
+}
+
+form ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+form li + li {
     margin-top: 1em;
+}
+
+button {
+    display: inline-block;
+    width: 100px;
+    margin-left: 200px;
+    background-color: pink;
+    border-width: 0.2em;
+    border-radius: 0.5em;
+}
+
+button:hover {
+    background-color: rgba(168, 116, 116, 0.57);
+}
+
+input{
+    border-radius:5px;
+    margin: 5px auto;
+}
+
+input:valid {
+    border: 2px solid green;
 }
 
 input:invalid {
@@ -59,4 +90,9 @@ input:invalid {
     border: none;
     outline: 2px solid red;
     border-radius: 5px;
+}
+
+input:focus{
+    /* 给激活的元素一点高亮效果 */
+    border-color: #000;
 }
